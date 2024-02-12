@@ -26,7 +26,9 @@ userInput.addEventListener("focus",function(){
 
 function pickRandomNum(){
     computerNum = Math.floor(Math.random() * 100) + 1;
+    console.log(computerNum)
 }
+
 
 function play(){
   let userValue = userInput.value;
@@ -68,8 +70,11 @@ function play(){
 
 function reset(){
     userInput.value = "";
+    resultArea.textContent = "??";
     pickRandomNum();
-    resultArea.textContent = "결과값이 여기 나옵니다!";
+    chances = 5
+    chanceArea.textContent = `기회 : ${chances}`;
+    history=[];
 }
 
 pickRandomNum();
