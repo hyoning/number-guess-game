@@ -5,16 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>숫자 맞추기 게임!</h1>
+    <div class="Wrap">
+        <div class="bg--Wrap">
+            <img src="../../images/1.svg" class="number1 numberImg"/>
+            <img src="../../images/2.svg" class="number2 numberImg"/>
+            <img src="../../images/3.svg" class="number3 numberImg"/>
+            <img src="../../images/4.svg" class="number4 numberImg"/>
+            <img src="../../images/5.svg" class="number5 numberImg"/>
+            <img src="../../images/6.svg" class="number6 numberImg"/>
+            <img src="../../images/7.svg" class="number7 numberImg"/>
+            <img src="../../images/8.svg" class="number8 numberImg"/>
+            <img src="../../images/9.svg" class="number9 numberImg"/>
+            <img src="../../images/0.svg" class="number0 numberImg"/>
+        </div>
+        <div class="numberGames--Wrap">
+            <div class="numberContent--Wrap">
+                <div class="title"><img src="../../images/title.png" alt="숫자 맞추기 게임"/></div>
+                <div class="numberContent">
+                    <div id="result-area">??</div>
+                    <div id="chance-area">기회 : 5</div>
+                    <div class="input--Wrap">
+                        <input type="number" id="user-input"/>
+                        <button id="play-button">Go</button>
+                        <button id="reset-button">Reset</button>
+                        <script src="main.js"></script> 
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div id="result-area">결과가 나온다</div>
-    <div id="chance-area">기회 : 5</div>
-    <input type="number" id="user-input"/>
-    <button id="play-button">Go!</button>
-    <button id="reset-button">리셋!</button>
-    <script src="main.js"></script> 
+    </div>
 </body>
 </html>
