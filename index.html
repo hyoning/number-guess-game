@@ -27,18 +27,23 @@
             <div class="numberContent--Wrap">
                 <div class="title"><img src="../../images/title.png" alt="숫자 맞추기 게임"/></div>
                 <div class="numberContent">
-                    <div id="result-area">??</div>
-                    <div id="chance-area">기회 : 5</div>
-                    <div class="input--Wrap">
-                        <input type="number" id="user-input"/>
-                        <button id="play-button">Go</button>
-                        <button id="reset-button">Reset</button>
-                        <script src="main.js"></script> 
+                    <div class="numberGame--Wrap">
+                        <div id="result-area">1과 50사이,<br>숫자를 맞춰봐!</div>
+                        
+                        <div class="input--Wrap">
+                            <input type="number" id="user-input"/>
+                            <button id="play-button" onClick="goMusicButton();">Go</button>
+                        </div>
+                        <div id="input-hint"></div>
+                        <div id="chance-area">기회 : 5</div>
+                        <div class="button--Wrap">             
+                            <button id="reset-button" onClick="resetMusicButton();"><img src="images/reset.svg" alt="reset"/></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+    <script src="main.js"></script> 
 </body>
 </html>

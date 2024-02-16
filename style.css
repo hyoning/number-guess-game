@@ -18,6 +18,9 @@ time, mark, audio, video {
     font-family:'Noto Sans KR', sans-serif;
 	vertical-align: baseline;
 }
+* {
+    box-sizing: border-box;
+}
 .Wrap{
     width:100%;
     height: 100vh;
@@ -28,87 +31,96 @@ time, mark, audio, video {
     width:80vw;
     max-width: 500px;
     min-width: 320px;
-    height:60vh;
-    background: #fff;
     position: absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
     text-align: center;
     box-sizing: border-box;
-    border-radius: 40px;
 }
 .title{
+    flex: 0 0 70px;
     width:80%;
-    padding-top:10%;
     margin:0 auto;
-    padding-bottom:2%;
     border-bottom:1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .title img{
-    width:50%;
+    width:10rem;
     max-width: 264px;
 }
 
 .numberContent--Wrap{
     width:100%;
     height: 100%;
-    position: relative;
-    left:0%;
-    top:0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.numberContent{
+    width:80%;
+    flex: 1 1 auto;
+    margin: 0 auto;
+}
+.numberGame--Wrap{
+    width:100%;
+    height:100%;
+    border-radius: 30px;
+    padding:5%;
+    text-align:center;
 }
 #result-area{
-    width:80%;
-    margin:0% auto 0;
-    font-size:2rem;
-    position: absolute;
-    left:50%;
-    top:40%;
-    transform: translateX(-50%);
-    
+    font-size:2rem;  
+    padding-bottom:5%; 
 }
 #chance-area{
     font-size:1rem;
-    position: absolute;
-    left:50%;
-    bottom: calc(10% + 74px);
-    transform: translateX(-50%);
     font-weight: 100;
-
+    padding-bottom:5%;
 }
 .input--Wrap{
-    width:80%;
+    width:100%;
     display: flex;
-    align-items: center;
     gap:10px;
-    position:absolute;
-    left:50%;
-    transform: translate(-50%);
-    bottom:10%;
+    padding-bottom:5%;
+}
+#input-hint{
+    font-size:10px;
+    color:#ff1717;
+    line-height: 1;
+    padding-bottom:5%;
 }
 #user-input{
     flex: 1 1 auto;
+    width:100%;
     height: 50px;
+    border-radius: 10px;
+    border:0;
+    background:#f7f7f7;
 }
-#play-button,
-#reset-button{
-    flex: 0 0 54px;
-    width: 54px;
-    height: 54px;
-    border-radius: 5%;
-}
+
 #play-button{
+    flex: 0 0 54px;
+    width:54px;
+    height:54px;
     background-color: #ff1717;
     border:1px solid #ff1717;
-    color:#fff
+    color:#fff;
+    border-radius: 100%;
 }
 #play-button:disabled{
     background-color: #888;
     border:1px solid #888;
 }
 #reset-button{
-    background-color: #fff;
-    border:1px solid #222;
+    width:36px;
+    height:36px;
+    background:none;
+    border:none;
+    padding:0;
 }
 
 .bg--Wrap{
@@ -246,12 +258,6 @@ time, mark, audio, video {
     }
 }
 
-@media (max-width: 500px)  {
-    .title{
-        padding-top:20%;
-    }
-
-}
 @media (max-width: 620px)  {
     .number1{
         left:1%;
