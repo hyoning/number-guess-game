@@ -9,21 +9,12 @@ let gameOver = false;
 let chanceArea = document.getElementById('chance-area');
 let history = []
 
-playButton.addEventListener('click', play);
-resetButton.addEventListener('click', reset);
-
-
-function goMusicButton() {
+playButton.addEventListener('click', function(){
   let audio1 = new Audio('music/go.mp3');
   audio1.play();
-}
-goMusicButton();
-
-function resetMusicButton() {
-  let audio2 = new Audio('music/start.mp3');
-  audio2.play();
-}
-resetMusicButton()
+  play();
+});
+resetButton.addEventListener('click', reset);
 
 
 // Input 영역 클릭 시 빈값으로 변경 한다.
@@ -96,6 +87,8 @@ function reset(){
     history=[];
     playButton.disabled = false;
     gameOver = false;
+    let audio2 = new Audio('music/start.mp3');
+    audio2.play();
 }
 
 pickRandomNum();
